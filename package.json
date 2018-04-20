@@ -4,7 +4,7 @@
   "description": "React Boiler Plate",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
+    "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production"
   },
   "keywords": [],
@@ -15,7 +15,9 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
     "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.10",
     "webpack-dev-server": "^3.1.3"
