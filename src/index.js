@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styles from './index.css';
+import styles from './index.scss';
 
 const Index = () => (
   <div className={styles.cb}>
