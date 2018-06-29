@@ -29,7 +29,7 @@ module.exports = {
       {
         test: /\.css$/,
         include: [
-          path.resolve(__dirname, 'not_exist_path'), // fixes issue when try to import css file
+          'src'
         ],
         use: [
           MiniCssExtractPlugin.loader,
