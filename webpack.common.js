@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
 
 const devMode = process.env.NODE_ENV !== 'production';
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
@@ -27,6 +28,9 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        include: [
+          'src'
+        ],
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader"
