@@ -1,3 +1,5 @@
 dist/
 node_modules/
 webpack.config.js
+webpack.common.js
+webpack.prod.js
