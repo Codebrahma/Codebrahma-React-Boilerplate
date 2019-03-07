@@ -2,7 +2,11 @@
   "parser": "babel-eslint",
   "extends": "airbnb",
   "rules": {
-    "react/jsx-filename-extension": 0
+    "react/jsx-filename-extension": 0,
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to" ]
+    }]
   },
   "parserOptions": {
     "ecmaFeatures": {
@@ -10,9 +14,9 @@
     }
   },
   "plugins": [
-    "react",
+    "react"
   ],
   "env": {
     "browser": true
-  },
+  }
 }
