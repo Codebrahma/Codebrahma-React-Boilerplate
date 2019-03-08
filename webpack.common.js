@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 
 const devMode = process.env.NODE_ENV !== 'production';
@@ -10,6 +11,10 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
+  output:{
+    path: path.join(__dirname,'/dist'),
+    filename:'[name].[hash].js'
+  },
   module: {
     rules: [
       {
@@ -29,7 +34,7 @@ module.exports = {
       {
         test: /\.css$/,
         include: [
-          'src'
+          path.resolve(__dirname, 'src'),
         ],
         use: [
           MiniCssExtractPlugin.loader,
@@ -53,5 +58,11 @@ module.exports = {
       filename: devMode ? '[name].css' : '[name].[hash].css',
       chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
     })
-  ]
+  ],
+  optimization: {
+    minimizer: [new UglifyJsPlugin()],
+  },
+  devServer: {
+    historyApiFallback: true,
+  }
 };
