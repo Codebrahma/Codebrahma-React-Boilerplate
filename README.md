@@ -6,7 +6,11 @@ A React Boilerplate with all the latest packages.
 
 #### 2. Webpack 4.29.6
 
-#### Style using SASS / CSS
+#### 3. Style using SASS / CSS
+
+#### 4. Code spliting with lazy and suspense
+
+#### 5. Uglification & URL hashing for js builds
 
 ### For Installing
 
