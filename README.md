@@ -2,9 +2,9 @@
 
 A React Boilerplate with all the latest packages.
 
-#### 1. React V16.3
+#### 1. React V16.8.4
 
-#### 2. Webpack 4
+#### 2. Webpack 4.29.6
 
 #### Style using SASS / CSS
 
